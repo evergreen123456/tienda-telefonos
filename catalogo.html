@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Teléfonos</title>
+    <link rel="stylesheet" href="styles.css">
+   
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+</head>
+<body>
+
+    <header>
+        <h1>Catálogo de Teléfonos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+                <li><a href="ubicacion.html">Ubicación</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="slider">
+        <div><img src="iphone.jpg" alt="Teléfono 1"></div>
+        <div><img src="samsung.jpg" alt="Teléfono 2"></div>
+
+    </section>
+
+    <section class="catalogo">
+        <div class="telefono">
+            <h2>iPhone X</h2>
+            <p>Pantalla de 5.8 pulgadas, cámara dual de 12 MP, 64 GB de almacenamiento.</p>
+            <p>Precio: $999</p>
+            <button onclick="anadirAlCarrito('iPhone X')">Añadir al carrito</button>
+        </div>
+
+        <div class="telefono">
+            <h2>Samsung Galaxy S20</h2>
+            <p>Pantalla de 6.2 pulgadas, cámara triple de 12+64+12 MP, 128 GB de almacenamiento.</p>
+            <p>Precio: $899</p>
+            <button onclick="anadirAlCarrito('Samsung Galaxy S20')">Añadir al carrito</button>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tienda de Teléfonos</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick();
+        });
+
+        function anadirAlCarrito(producto) {
+            alert("Producto añadido al carrito: " + producto);
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Teléfonos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function mostrarMensaje() {
+            alert("¡Suscrito!");
+        }
+
+        function anadirAlCarrito(producto) {
+            alert("Producto añadido al carrito: " + producto);
+            // Puedes agregar aquí la lógica para manejar el carrito, por ejemplo, enviar datos al servidor.
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Tienda de Teléfonos</h1>
+        <nav>
+            <ul>
+                <li><a href="catalogo.html">catalogo</a></li>
+
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+                <li><a href="ubicacion.html">Ubicación</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="telefono">
+            <img src="iphone.jpg" alt="Teléfono 1">
+            <div class="telefono-info">
+                <h2>iPhone X</h2>
+                <p>Pantalla de 5.8 pulgadas, cámara dual de 12 MP, 64 GB de almacenamiento.</p>
+                <p>Precio: $999</p>
+                <button onclick="anadirAlCarrito('iPhone X')">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="telefono">
+            <img src="samsung.jpg" alt="Teléfono 2">
+            <div class="telefono-info">
+                <h2>Samsung Galaxy S20</h2>
+                <p>Pantalla de 6.2 pulgadas, cámara triple de 12+64+12 MP, 128 GB de almacenamiento.</p>
+                <p>Precio: $899</p>
+                <button onclick="anadirAlCarrito('Samsung Galaxy S20')">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="formulario">
+            <h2>Suscríbete para recibir novedades</h2>
+            <form action="procesar_suscripcion.php" method="post">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <button type="button" onclick="mostrarMensaje()">Suscribirse</button>
+            </form>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tienda de Teléfonos</p>
+    </footer>
+
+</body>
+</html>
